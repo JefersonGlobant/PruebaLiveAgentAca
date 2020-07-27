@@ -42,27 +42,28 @@
             //embedded_svc.settings.fallbackRouting = []; //Una matriz de identificadores de botones, de usuario o userId_buttonId
             //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Toma como valor predeterminado la opción Contacto)
 
+            embedded_svc.settings.extraPrechatFormDetails = [
+                { label: 'Nombre', value: '', transcriptFields: [], displayToAgent: true },
+                { label: 'Email', value: 'test@test.com', transcriptFields: [], displayToAgent: true },
+                { label: 'DNI', value: '', transcriptFields: [], displayToAgent: true },
+                { label: 'Subject', value: 'Sales forecasts', transcriptFields: [], displayToAgent: true },
+            ];
+            
             embedded_svc.settings.extraPrechatInfo = [{
-              "entityFieldMaps": [{
-                "doCreate":false,
-                "doFind":false,
-                "fieldName":"LastName",
-                "isExactMatch":false,
-                "label":"Apellido"
-              }, {
-                "doCreate":false,
-                "doFind":false,
-                "fieldName":"FirstName",
-                "isExactMatch":false,
-                "label":"Nombre"
-              }, {
-                "doCreate":false,
-                "doFind":true,
-                "fieldName":"DNI__c",
-                "isExactMatch":true,
-                "label":"DNI"
-              }],
-              "entityName":"Contact"
+                "entityName":"Contact",
+                "entityFieldMaps": [{
+                    "doCreate":false,
+                    "doFind":false,
+                    "fieldName":"FirstName",
+                    "isExactMatch":false,
+                    "label":"Nombre"
+                }, {
+                    "doCreate":false,
+                    "doFind":true,
+                    "fieldName":"DNI__c",
+                    "isExactMatch":true,
+                    "label":"DNI"
+                }]
             }];
             
             embedded_svc.settings.enabledFeatures = ['LiveAgent'];
