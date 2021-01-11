@@ -47,16 +47,16 @@
             embedded_svc.settings.smallCompanyLogoImgURL = "./img/Avalian_color_RGB.jpg";
 
             embedded_svc.init(
-                'https://acasalud--uat.my.salesforce.com',
-                'https://uat-acasalud.cs45.force.com',
+                'https://acasalud--dev.my.salesforce.com',
+                'https://dev-acasalud.cs191.force.com',
                 gslbBaseURL,
-                '00D8A0000005P6b',
+                '00DV0000008s6lv',
                 'Prueba_Live_Agent_Snapin',
                 {
-                    baseLiveAgentContentURL: 'https://c.la2-c1cs-ph2.salesforceliveagent.com/content',
+                    baseLiveAgentContentURL: 'https://c.la3-c1cs-ia5.salesforceliveagent.com/content',
                     deploymentId: '572Q00000004Ckj',
                     buttonId: '573Q00000004D87',
-                    baseLiveAgentURL: 'https://d.la2-c1cs-ph2.salesforceliveagent.com/chat',
+                    baseLiveAgentURL: 'https://d.la3-c1cs-ia5.salesforceliveagent.com/chat',
                     eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IQ00000004CAzMAM_16adcd3b7d1',
                     isOfflineSupportEnabled: false
                 }
@@ -65,7 +65,7 @@
 
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://acasalud--uat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://acasalud--dev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
             s.onload = function() {
                 initESW(null);
             };
