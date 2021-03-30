@@ -3,22 +3,22 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Live Agent</title>
-      
     <style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #06BF88;
-		font-family: "Salesforce Sans", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #06BF88;
-	}
-	@font-face {
-		font-family: 'Salesforce Sans';
-		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
-	}
-</style>
-
+        .embeddedServiceHelpButton .helpButton .uiButton {
+            background-color: #06BF88;
+            font-family: "Salesforce Sans", sans-serif;
+        }
+        .embeddedServiceHelpButton .helpButton .uiButton:focus {
+            outline: 1px solid #06BF88;
+         }
+        @font-face {
+            font-family: 'Salesforce Sans';
+            src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -42,9 +42,9 @@
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-        embedded_svc.settings.avatarImgURL = "./img/AVA-250x250.jpg";
-        embedded_svc.settings.chatbotAvatarImgURL = "./img/AVA-250x250.jpg";
-        embedded_svc.settings.smallCompanyLogoImgURL = "./img/Avalian_color_RGB.jpg";
+		embedded_svc.settings.avatarImgURL = "./img/AVA-250x250.jpg";
+		embedded_svc.settings.chatbotAvatarImgURL = "./img/AVA-250x250.jpg";
+		embedded_svc.settings.smallCompanyLogoImgURL = "./img/Avalian_color_RGB.jpg";
 
 		embedded_svc.init(
 			'https://acasalud--uatbox1.my.salesforce.com',
@@ -74,5 +74,6 @@
 		initESW('https://service.force.com');
 	}
 </script>
+
 </body>
 </html>
