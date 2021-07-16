@@ -3,22 +3,21 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Live Agent</title>
-    <style type='text/css'>
-        .embeddedServiceHelpButton .helpButton .uiButton {
-            background-color: #06BF88;
-            font-family: "Salesforce Sans", sans-serif;
-        }
-        .embeddedServiceHelpButton .helpButton .uiButton:focus {
-            outline: 1px solid #06BF88;
-         }
-        @font-face {
-            font-family: 'Salesforce Sans';
-            src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
-        }
-    </style>
-</head>
-<body>
+  <style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #06BF88;
+		font-family: "Salesforce Sans", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #06BF88;
+	}
+	@font-face {
+		font-family: 'Salesforce Sans';
+		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+	}
+</style>
+
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -42,21 +41,18 @@
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-		embedded_svc.settings.avatarImgURL = "./img/AVA-250x250.jpg";
-		embedded_svc.settings.chatbotAvatarImgURL = "./img/AVA-250x250.jpg";
-		embedded_svc.settings.smallCompanyLogoImgURL = "./img/Avalian_color_RGB.jpg";
 
 		embedded_svc.init(
-			'https://acasalud--uatbox1.my.salesforce.com',
-			'https://uatbox1-acasalud.cs26.force.com',
+			'https://acasalud--dev.my.salesforce.com',
+			'https://dev-acasalud.cs191.force.com',
 			gslbBaseURL,
-			'00D21000000IM4C',
+			'00DV0000008s6lv',
 			'Prueba_Live_Agent_Snapin',
 			{
-				baseLiveAgentContentURL: 'https://c.la4-c1cs-phx.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la3-c1cs-ia5.salesforceliveagent.com/content',
 				deploymentId: '572Q00000004Ckj',
 				buttonId: '573Q00000004D87',
-				baseLiveAgentURL: 'https://d.la4-c1cs-phx.salesforceliveagent.com/chat',
+				baseLiveAgentURL: 'https://d.la3-c1cs-ia5.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IQ00000004CAzMAM_16adcd3b7d1',
 				isOfflineSupportEnabled: false
 			}
@@ -65,7 +61,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://acasalud--uatbox1.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://acasalud--dev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
@@ -74,6 +70,5 @@
 		initESW('https://service.force.com');
 	}
 </script>
-
 </body>
 </html>
