@@ -29,17 +29,17 @@
 		embedded_svc.settings.smallCompanyLogoImgURL = "./img/Avalian_color_RGB.jpg";
 
 		embedded_svc.init(
-			'https://acasalud--dev.my.salesforce.com',
-			'https://dev-acasalud.cs191.force.com',
+			'https://acasalud--uat1.my.salesforce.com',
+			'https://uat1-acasalud.cs61.force.com',
 			gslbBaseURL,
-			'00DV0000008s6lv',
+			'00D4C0000000ynh',
 			'Prueba_Live_Agent_Snapin',
 			{
-				baseLiveAgentContentURL: 'https://c.la3-c1cs-ia5.salesforceliveagent.com/content',
-				deploymentId: '572Q00000004Ckj',
-				buttonId: '573Q00000004D87',
-				baseLiveAgentURL: 'https://d.la3-c1cs-ia5.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IQ00000004CAzMAM_16adcd3b7d1',
+				baseLiveAgentContentURL: 'https://c.la2-c1cs-ia5.salesforceliveagent.com/content',
+				deploymentId: '5721U000000IgJB',
+				buttonId: '5731U000000IhlI',
+				baseLiveAgentURL: 'https://d.la2-c1cs-ia5.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1U0000008Wy8UAE_175b2dae967',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -47,7 +47,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://acasalud--dev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://acasalud--uat1.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
